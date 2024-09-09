@@ -51,6 +51,6 @@ public class CharacterGroup
     // Метод для поиска персонажа по имени
     public Character FindCharacterByName(string name)
     {
-        return characters.FirstOrDefault(c => c.Name == name).ToString();
+        return characters.FirstOrDefault(c => c.Element == name).ToString();
     }
 }

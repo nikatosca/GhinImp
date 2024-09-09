@@ -22,4 +22,13 @@ public record Character
     {
         return AttackPower > 80;
     }
+    
+    public int CalculateTotalSkillDamage()
+    {
+        foreach (var skill in Skills)
+        {
+            totalDamage += skill.CalculateSkillDamage();
+        }
+        return totalDamage;
+    }
 }
