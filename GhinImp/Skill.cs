@@ -13,7 +13,7 @@ public class Skill
     }
 
     // Метод для расчета урона навыка
-    public void CalculateSkillDamage()
+    public int CalculateSkillDamage()
     {
         return Damage * 2;
     }

@@ -1,6 +1,5 @@
 namespace GhinImp;
 
-
 // Класс для вычисления среднего показателя силы атаки
 public class AttackCalculator
 {

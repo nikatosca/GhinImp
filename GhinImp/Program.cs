@@ -17,26 +17,32 @@ foreach (var character in powerfulCharacters)
     Console.WriteLine($"Character: {character.Name}, Attack Power: {character.AttackPower}");
 }
 
-var highAttackers = characterGroup.FilterCharacters(c => attackCalculator.CalculateAverageAttack(c) > 80);
+Console.WriteLine();
+
+/*var highAttackers = characterGroup.FilterCharacters(c => attackCalculator.CalculateAverageAttack(c) > 80);
 
 foreach (var character in highAttackers)
 {
     Console.WriteLine(
         $"Character: {character.Name}, Average Attack: {attackCalculator.CalculateAverageAttack(character):F2}");
-}
+}*/
 
-var sortedCharacters = characterGroup.SortCharactersByName;
+var sortedCharacters = characterGroup.SortCharactersByName; //ccылка на метод 
+Console.WriteLine("Sorted Characters by Name:");
 
-foreach (var character in sortedCharacters)
+foreach (var character in sortedCharacters()) // () вызов метода 
 {
     Console.WriteLine($"Character: {character.Name}");
 }
 
+Console.WriteLine();
 Console.WriteLine($"Number of Pyro characters: {characterGroup.CountCharactersByElement("Pyro")}");
 
 // Используем метод GetStrongestCharacter для нахождения персонажа с наибольшей силой атаки
 var strongestCharacter = characterGroup.GetStrongestCharacter();
 Console.WriteLine($"\nStrongest Character: {strongestCharacter.Name} with Attack Power: {strongestCharacter.AttackPower}");
+
+Console.WriteLine();
 
 
 // Используем метод FindCharacterByName для поиска персонажа по имени
